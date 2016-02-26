@@ -45,8 +45,7 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" method="POST" action = "http://localhost:8080/loginp/">
-                        {% csrf_token %}
+                        <form role="form" method="POST">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Username" name="username" type="text" id="Username" autofocus>
@@ -61,8 +60,8 @@
                                     <a class = "pull-right" href="fpass.html">Forgot Password?</a>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <input type = "Submit" value = "Login" class="btn btn-lg btn-success btn-block">
-                                <input type = "Reset" value = "Clear" name = "Clear"class="btn btn-lg btn-success btn-block">
+                                <input type = "Button" value = "Login" onClick="check()" class="btn btn-lg btn-success btn-block">
+                                <input type = "Reset" value = "Clear" name = "Clear" href="index.html" class="btn btn-lg btn-success btn-block">
                             </fieldset>
                         </form>
                     </div>
