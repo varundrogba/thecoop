@@ -1,14 +1,4 @@
 from django.db import models
-from event.models import event
-from billing.models import billing
-from aduser.models import aduser
-
-Society = 'S'
-    Personal = 'P'
-    bill_CHOICES = (
-        (Society, 'Society'),
-        (Personal, 'Personal'),
-    )
 
 class Society(models.Model):
     soc_name = models.CharField(max_length=30)

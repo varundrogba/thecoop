@@ -1,7 +1,14 @@
 from django.db import models
+from django.contrib.auth.models import User
 
+Society = 'S'
+Personal = 'P'
+bill_CHOICES = (
+(Society, 'Society'),
+(Personal, 'Personal'),
+)
 
-class Billing(models.Model):
+class Billing(models.Model,User):
     bill_name = models.CharField(max_length=60)
     bill_type = models.CharField(max_length=1, choices = bill_CHOICES)
     bill_amtpaid = models.PositiveSmallIntegerField(99999)

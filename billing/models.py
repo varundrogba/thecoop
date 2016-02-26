@@ -1,8 +1,12 @@
 from django.db import models
-from django.contrib.auth.models import User
-from event.models import event
-from society.models import *
-from aduser.models import aduser
+
+
+Society = 'S'
+Personal = 'P'
+bill_CHOICES = (
+(Society, 'Society'),
+(Personal, 'Personal'),
+)
 
 class Billing(models.Model):
     bill_name = models.CharField(max_length=60)

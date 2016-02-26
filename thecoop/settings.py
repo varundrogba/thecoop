@@ -36,11 +36,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'society'
-    'aduser'
-    'billing'
-    'messaging'
-    'event'
+    'society',
+    'billing',
+    'messaging',
+    'event',
+    'aduser',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -71,6 +71,17 @@ DATABASES = {
     
     }
 }
+
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    "/home/varunms/Folder/thecoop/Templates/Pages"
+)
+
+MEDIA_ROOT = '/home/varunms/Folder/thecoop/Media/images'
+
+MEDIA_URL = '/images/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
