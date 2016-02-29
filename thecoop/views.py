@@ -1,6 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.http import Http404, HttpResponse
 from django.shortcuts import render
+from django.contrib.staticfiles import *
 
 def cooplog(request):
     username = request.POST['username']
