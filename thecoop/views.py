@@ -4,18 +4,22 @@ from django.shortcuts import render
 from django.contrib.staticfiles import *
 
 def cooplog(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(username=username, password=password)
-    if user is not None:
-        if user.is_active:
-            login(request, user)
-            return HttpResponse("Successfully Logged In")
+    print request
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return HttpResponse("Successfully Logged In")
+            else:   
+                return HttpResponse("Locked Out")   
         else:
-            return HttpResponse("Locked Out")   
-    else:
-        return HttpResponse("Invalid Credentials")
+            return HttpResponse("Invalid Credentials")
 
-def cooplogin(request):
-    return render(request, 'login.html')
+    if request.method == "GET":
+        return render(request, 'login.html')
        
+    else:
+        return HttpResponse("There seems to be a problem!")

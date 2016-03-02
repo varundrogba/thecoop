@@ -44,7 +44,8 @@
                     </div>
 
                     <div class="panel-body">
-                        <form role="form" method="POST" action = "http://localhost:8000/loginp/">
+                        <form role="form" method="POST" action = "http://localhost:8000/login/">
+                        {% csrf_token %}
                            <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Username" name="username" type="text" id="Username" autofocus>
@@ -62,7 +63,7 @@
                                 <input type = "Submit" value = "Login" class="btn btn-lg btn-success btn-block">
                                 <input type = "Reset" value = "Clear" name = "Clear"class="btn btn-lg btn-success btn-block">
                             </fieldset>
-                            {% csrf_token %}
+                            
                         </form>
                     </div>
                 </div>
@@ -83,4 +84,3 @@
     <script src="{ % static "Bootstrap/dist/js/sb-admin-2.js" %}" </script>
 </body>
 </html>
-

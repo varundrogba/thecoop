@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
-from thecoop.views import cooplogin, cooplog
+from thecoop.views import cooplog
 from django.contrib import admin
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -9,6 +10,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^login/', cooplogin),
-    url(r'^loginp/', cooplog),
+    url(r'^login/', cooplog),
+    #url(r'^loginp/', cooplog),
 )
