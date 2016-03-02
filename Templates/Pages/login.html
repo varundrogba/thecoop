@@ -62,8 +62,9 @@
                                 <!-- Change this to a button or input when using this as a form -->
                                 <input type = "Submit" value = "Login" class="btn btn-lg btn-success btn-block">
                                 <input type = "Reset" value = "Clear" name = "Clear"class="btn btn-lg btn-success btn-block">
+                            {% csrf_token %}
                             </fieldset>
-                            
+                            {% csrf_token %}
                         </form>
                     </div>
                 </div>
