@@ -1,0 +1,8 @@
+S X cache
+.DS_Store
+
+# Python compiled, optimized files
+*.py[cod]
+
+# Logs
+*.log
