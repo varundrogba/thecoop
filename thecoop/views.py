@@ -4,7 +4,6 @@ from django.shortcuts import render
 from django.contrib.staticfiles import *
 
 def cooplog(request):
-    print request
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
@@ -23,3 +22,8 @@ def cooplog(request):
        
     else:
         return HttpResponse("There seems to be a problem!")
+
+def test(request):
+    r=request
+    print r
+    return render(request,r)

@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'messaging',
     'event',
     'aduser',
+    'tastypie',
 )
 
 MIDDLEWARE_CLASSES = (
