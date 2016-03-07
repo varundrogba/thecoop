@@ -6,3 +6,5 @@ S X cache
 
 # Logs
 *.log
+*.py~
+*.gitignore~
