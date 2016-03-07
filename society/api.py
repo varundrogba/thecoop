@@ -6,3 +6,13 @@ class SocietyResource(ModelResource):
     class Meta:
         queryset = Society.objects.all()
         resource_name = 'society'
+
+class BuildingResource(ModelResource):
+    class Meta:
+        queryset = Building.objects.all()
+        resource_name = 'building'
+
+class FlatResource(ModelResource):
+    class Meta:
+        queryset = Flat.objects.all()
+        resource_name = 'flat'

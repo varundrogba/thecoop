@@ -5,13 +5,13 @@ from django.contrib.staticfiles import *
 
 def cooplog(request):
     if request.method == "POST":
-        username = request.POST['username']
+        usernaapme = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return HttpResponse("Successfully Logged In")
+                return render(request, 'aduser/api.py')
             else:   
                 return HttpResponse("Locked Out")   
         else:
@@ -27,3 +27,6 @@ def test(request):
     r=request
     print r
     return render(request,r)
+
+#def cooplogsuc(request):
+        
