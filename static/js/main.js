@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	
+}) ;
+
+
+$(document).ready(function(){
+    $.ajax({url: "demo_test.txt", success: function(result){
+        $("#div1").html(result);
+    }});
+});

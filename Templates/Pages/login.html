@@ -30,7 +30,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
     <div class="container">
         <div class="row">
@@ -42,7 +41,6 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
-
                     <div class="panel-body">
                         <form role="form" method="POST" action = "http://localhost:8000/login/">
                         {% csrf_token %}
@@ -62,9 +60,7 @@
                                 <!-- Change this to a button or input when using this as a form -->
                                 <input type = "Submit" value = "Login" class="btn btn-lg btn-success btn-block">
                                 <input type = "Reset" value = "Clear" name = "Clear"class="btn btn-lg btn-success btn-block">
-                            {% csrf_token %}
                             </fieldset>
-                            {% csrf_token %}
                         </form>
                     </div>
                 </div>
@@ -74,6 +70,8 @@
 
     <!-- jQuery -->
     <script src="{% static "Bootstrap/bower_components/jquery/dist/jquery.min.js" %} "></script>
+
+    <script src="{% static "js/main.js" %} "></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src=" {% static "Bootstrap/bower_components/bootstrap/dist/js/bootstrap.min.js" %} "></script>

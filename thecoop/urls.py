@@ -14,6 +14,7 @@ from billing.api import BillingResource
 from event.api import EventResource
 from aduser.api import AdUserResource
 
+
 society_resource = SocietyResource()
 building_resource = BuildingResource()
 flat_resource = FlatResource()
@@ -21,6 +22,8 @@ event_resource = EventResource()
 billing_resource = BillingResource()
 aduser_resource = AdUserResource()
 messaging_resource = MessagingResource()
+
+
 
 thecoop_api = Api(api_name='thecoop_api')
 
@@ -43,7 +46,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/', cooplog),
-    #url(r'^logsuc/', cooplogsuc),
+    url(r'^logsuc/', cooplogsuc),
     url(r'^test/',test),
     url(r'^api/', include(thecoop_api.urls)),
     #url(r'^api/', include(society_resource.urls)),

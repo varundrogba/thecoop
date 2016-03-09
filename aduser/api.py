@@ -7,3 +7,8 @@ class AdUserResource(ModelResource):
         queryset = AdUser.objects.all()
         resource_name = 'aduser'
  
+
+	def user_detail(request, username):
+		res = AdUserResource()
+		request_bundle = res.build_bundle(request=request)
+		user = res.obj_get(request_bundle, username=username)
