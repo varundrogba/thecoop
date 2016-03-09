@@ -101,7 +101,7 @@
                     </ul>
                     <!-- /.dropdown-messages -->
                 </li> 
-                </li>
+                
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -278,7 +278,7 @@
                                         </li>
                                         <li class="divider"></li>
                                         <li>
-                                            <a href="#">
+                                            <a href="logout">
                                                 <i class="fa fa-sign-out fa-fw"></i> Sign Out
                                             </a>
                                         </li>
@@ -389,7 +389,7 @@
                                     <i class="fa fa-comments fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
+                                    <div class="huge" id="no_of_active_events"></div>
                                     <div>Events</div>
                                 </div>
                             </div>
@@ -469,7 +469,8 @@
                         </a>
                     </div>
                 </div>
-
+            </div>
+        </div>
     <!-- jQuery -->
     <script src="{% static "Bootstrap/bower_components/jquery/dist/jquery.min.js" %} "></script>
 
@@ -480,10 +481,12 @@
     <script src=" {% static "Bootstrap/bower_components/metisMenu/dist/metisMenu.min.js" %}" ></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="{ % static "Bootstrap/dist/js/sb-admin-2.js" %}" > </script>
+    <script src="{% static "Bootstrap/dist/js/sb-admin-2.js" %}" > </script>
      <!-- Morris Charts JavaScript -->
     <script src=" {% static "Bootstrap/bower_components/raphael/raphael-min.js" %}"></script>
     <script src=" {% static "Bootstrap/bower_components/morrisjs/morris.min.js" %}"></script>
     <script src=" {% static "Bootstrap/js/morris-data.js" %}"></script>
+    <!-- Main.js custom script -->
+    <script src="{% static "js/main.js" %} "></script>
 </body>
 </html>

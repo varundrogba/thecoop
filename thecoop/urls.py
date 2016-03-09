@@ -46,6 +46,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/', cooplog),
+    #url(r'^logout/',homepage),
     url(r'^logsuc/', cooplogsuc),
     url(r'^test/',test),
     url(r'^api/', include(thecoop_api.urls)),

@@ -13,7 +13,7 @@ def cooplog(request):
                 login(request, user)
                 return render(request, 'logsuc.html', {'name': user.first_name})
             else:   
-                return user_detailttpResponse("Locked Out")   
+                return HttpResponse("Locked Out")   
         else:
             return HttpResponse("Invalid Credentials")
 
@@ -29,4 +29,8 @@ def test(request):
     return render(request,r)
 
 def cooplogsuc(request):
-    return render(request, 'logsuc.html')        
+    
+    return render(request, 'logsuc.html') 
+
+def homepage(request):
+    return render(request, 'index.html')            
